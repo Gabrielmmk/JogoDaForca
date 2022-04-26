@@ -1,35 +1,85 @@
+body{
+    background-color: #00546F;
+}
+
 #container {
-    border: solid black 2px;
+    border: solid black 3px;
     width: 900px;
     height: 900px;
     margin: 5px auto;
+    background-color: #8CC7FF;
 
 }
 
-#logo {
-    border: solid red 2px;
+#logo {    
     text-align: center;
     font-size: 1.3em;
+    background-color: #008BB8;
+    height: 100px;
+    text-align: center;
+    border-bottom: solid black 1px;
+    border-top: solid black 1px;
 }
 
 #forca {
-    border: solid green 2px;
+    border: solid black 2px;
     width: 400px;
-    height: 385px;
+    height: 387px;
     margin: 10px auto;
+    background-color: white;
     
 }
 
 #forca img{
-    border: solid blue 1px;
+
 }
 
 #forca h3{
-    border: solid red 2px;
-    height: 20px;
+    height: 25px;
     text-align: center;
     font-size: 1.3em;
 }
+
+#palavra{
+    width: 600px;
+    height: 80px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.8em;
+    background-color: white;
+
+}
+
+.letras h3{
+    width: 25px;
+    float: left; 
+    margin: 0px 2px;
+    
+}
+
+.teclado{
+    margin-top: 10px;
+    padding: 30px;
+    height: 150px;
+    width: 545px;
+    margin: 10px auto;
+    background-color: #008BB8;
+    border-radius: 10px 10px;
+}
+
+.teclado h2{
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 7px;
+    text-align: center;
+    line-height: 40px;
+    font-style: italic;
+    background-color: white;
+    border-radius: 10px 10px;
+    cursor: pointer;
+}
+
 
 
 
