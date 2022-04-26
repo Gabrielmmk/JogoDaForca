@@ -1,0 +1,35 @@
+#container {
+    border: solid black 2px;
+    width: 900px;
+    height: 900px;
+    margin: 5px auto;
+
+}
+
+#logo {
+    border: solid red 2px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+#forca {
+    border: solid green 2px;
+    width: 400px;
+    height: 385px;
+    margin: 10px auto;
+    
+}
+
+#forca img{
+    border: solid blue 1px;
+}
+
+#forca h3{
+    border: solid red 2px;
+    height: 20px;
+    text-align: center;
+    font-size: 1.3em;
+}
+
+
+
