@@ -82,9 +82,3 @@ function clique(letra){
 }
 
 
-function teste(modalID){
-    const modal = document.getElementById(modalID)
-    modal.classList.add('modal')    
-}
-
-teste('abrirModal')
