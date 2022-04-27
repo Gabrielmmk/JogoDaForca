@@ -46,9 +46,6 @@ body{
 
 }
 
-.letras h3{
-
-}
 
 .teclado{
     margin-top: 10px;
@@ -73,3 +70,49 @@ body{
     cursor: pointer;
 }
 
+.teste{
+    border: solid red 2px;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, .5);
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.teste.mostrar{
+    display: flex;
+}
+
+.modal{
+    background: white;
+    width: 60%;
+    text-align: center;
+    position: relative;
+
+}
+
+.modal input{
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color:#BD0000 ;
+    color: #590000;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}

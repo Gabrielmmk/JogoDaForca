@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo Da Forca</title>
     <link rel="stylesheet" type="text/css" href="../CSS/estilo.css">
-    <script src="../JS/arquivo.js"></script>
     
     
 </head>
@@ -60,9 +59,21 @@
             <h2 id="m" onclick="clique('m')">M</h2>
         </div>
 
+        <div id="alo" class="teste">
+            <div class="modal">
+                <button onclick="fechar()" class="fechar">x</button>
+                <h1>Oh não, você perdeu :(</h1>
+                <h3>Mas não se preocupe, você pode tentar novamente!</h3>
+                <form>
+                    <input onclick="jogarNovamente()" type="button" value="Tentar novamente">
+                </form>
+            </div>
+        </div>
         
+        
+    <script src="../JS/arquivo.js"></script>
+
     </div>
-    
     
 </body>
 </html>

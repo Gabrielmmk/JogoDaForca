@@ -1,11 +1,12 @@
 
 var cont = 0
-var palavra = 'girafa'
+var palavra = 'peixe'
 
 var usadas = '' 
 var letras = [] 
 var underline = []
 
+var termina = false
 
 function tamanho(){
     for(x in palavra){
@@ -13,18 +14,16 @@ function tamanho(){
     }
 
     for(i of palavra){
-        console.log(i)
         letras.push(i)
-        console.log(letras)
     }
     under()
 }
 
 function under(){
     for(i of underline){
-        console.log(document.getElementById('letra'))
         document.getElementById('letra').innerHTML += i
     }
+
 }
 
 
@@ -40,8 +39,10 @@ function perdeu (){
         document.getElementById('imagem').src= "../Image/forca4.jpg"
     }else if(cont == 5){
         document.getElementById('imagem').src= "../Image/forca5.jpg"
-    }else if(cont == 6){
+    }else if(cont == 6 && termina == false){
         document.getElementById('imagem').src= "../Image/forca6.jpg"
+        termina = true
+        inicialModal('alo')
     }
 }
 
@@ -51,24 +52,22 @@ function verifica (id){
         var container = document.getElementById(id);
         container.style.backgroundColor = "#4DFF00"
         for(i of palavra){
-            console.log(i)
             if(id == i){
                 var removed = underline.splice(cont1, 1, id)
-                console.log(underline)
                 cont1 += 1
                 var virgula = underline.join(' ')
                 document.getElementById('letra').innerHTML = virgula
             }else{
-                console.log("errou")
                 cont1 += 1
             }
         }
 
     }else{
-        console.log("Errou")
-        perdeu()
-        var container = document.getElementById(id);
-        container.style.backgroundColor = "#FF0000"
+        if(termina == false){
+            perdeu()
+            var container = document.getElementById(id);
+            container.style.backgroundColor = "#FF0000"
+        }
     }
 
 }
@@ -77,8 +76,38 @@ function clique(letra){
     if(usadas.includes(letra) == false){
         usadas = usadas + letra
         verifica(letra)
-        console.log(underline)
     }
 }
+
+function inicialModal(modalID){
+    const modal = document.getElementById(modalID)
+    modal.classList.add('mostrar')
+}
+
+function fechar(){
+    const modal = document.getElementById('alo')
+    modal.classList.remove('mostrar')
+}
+
+function jogarNovamente(){
+    const modal = document.getElementById('alo')
+    modal.classList.remove('mostrar')
+    console.log(usadas)
+    document.getElementById('imagem').src= "../Image/forca0.jpg"
+    for(x of usadas){
+        var container = document.getElementById(x)
+        container.style.backgroundColor = 'white'
+    }
+    cont = 0
+    usadas = '' 
+    letras = [] 
+    underline = []
+    termina = false 
+    document.getElementById('letra').innerHTML = ''
+    tamanho()
+}
+
+
+
 
 
