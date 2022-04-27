@@ -10,7 +10,7 @@
     
     
 </head>
-<body>
+<body onload="tamanho()">
     
     <div id="container">
         <div id="logo">
@@ -18,49 +18,50 @@
         </div>   
 
         <div id="forca">
-            <h3>Dica</h3>
-            <img src="../Image/forca0.jpg">
+            <h3>Animal</h3>
+            <img id="imagem" src="../Image/forca0.jpg">
 
         </div> 
 
         <div id="palavra">
             <div class="letras">
-                <h3>_ </h3>
-                <h3>_</h3>
+                <h3 id="letra"></h3>
             </div>
 
         </div>  
         
         <div class="teclado">
-            <h2 id="q" onclick="teste()">Q</h2>
-            <h2>W</h2>
-            <h2>E</h2>
-            <h2>R</h2>
-            <h2>T</h2>
-            <h2>Y</h2>
-            <h2>U</h2>
-            <h2>I</h2>
-            <h2>O</h2>
-            <h2>P</h2>
-            <h2>A</h2>
-            <h2>S</h2>
-            <h2>D</h2>
-            <h2>F</h2>
-            <h2>G</h2>
-            <h2>H</h2>
-            <h2>J</h2>
-            <h2>K</h2>
-            <h2>L</h2>
-            <h2>Ç</h2>
-            <h2>Z</h2>
-            <h2>X</h2>
-            <h2>C</h2>
-            <h2>V</h2>
-            <h2>B</h2>
-            <h2>N</h2>
-            <h2>M</h2>
+            <h2 id="q" onclick="clique('q')">Q</h2>
+            <h2 id="w" onclick="clique('w')">W</h2>
+            <h2 id="e" onclick="clique('e')">E</h2>
+            <h2 id="r" onclick="clique('r')">R</h2>
+            <h2 id="t" onclick="clique('t')">T</h2>
+            <h2 id="y" onclick="clique('y')">Y</h2>
+            <h2 id="u" onclick="clique('u')">U</h2>
+            <h2 id="i" onclick="clique('i')">I</h2>
+            <h2 id="o" onclick="clique('o')">O</h2>
+            <h2 id="p" onclick="clique('p')">P</h2>
+            <h2 id="a" onclick="clique('a')">A</h2>
+            <h2 id="s" onclick="clique('s')">S</h2>
+            <h2 id="d" onclick="clique('d')">D</h2>
+            <h2 id="f" onclick="clique('f')">F</h2>
+            <h2 id="g" onclick="clique('g')">G</h2>
+            <h2 id="h" onclick="clique('h')">H</h2>
+            <h2 id="j" onclick="clique('j')">J</h2>
+            <h2 id="k" onclick="clique('k')">K</h2>
+            <h2 id="l" onclick="clique('l')">L</h2>
+            <h2 id="ç" onclick="clique('ç')">Ç</h2>
+            <h2 id="z" onclick="clique('z')">Z</h2>
+            <h2 id="x" onclick="clique('x')">X</h2>
+            <h2 id="c" onclick="clique('c')">C</h2>
+            <h2 id="v" onclick="clique('v')">V</h2>
+            <h2 id="b" onclick="clique('b')">B</h2>
+            <h2 id="n" onclick="clique('n')">N</h2>
+            <h2 id="m" onclick="clique('m')">M</h2>
         </div>
+        
     </div>
+    
     
 </body>
 </html>

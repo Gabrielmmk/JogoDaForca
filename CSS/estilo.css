@@ -30,10 +30,6 @@ body{
     
 }
 
-#forca img{
-
-}
-
 #forca h3{
     height: 25px;
     text-align: center;
@@ -51,10 +47,7 @@ body{
 }
 
 .letras h3{
-    width: 25px;
-    float: left; 
-    margin: 0px 2px;
-    
+
 }
 
 .teclado{
@@ -79,6 +72,9 @@ body{
     border-radius: 10px 10px;
     cursor: pointer;
 }
+
+
+
 
 
 
