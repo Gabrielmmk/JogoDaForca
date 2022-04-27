@@ -1,12 +1,13 @@
 
 var cont = 0
-var palavra = 'peixe'
+var palavra = 'jaboticaba'
 
 var usadas = '' 
 var letras = [] 
 var underline = []
 
 var termina = false
+var vitoria = 0
 
 function tamanho(){
     for(x in palavra){
@@ -53,6 +54,7 @@ function verifica (id){
         container.style.backgroundColor = "#4DFF00"
         for(i of palavra){
             if(id == i){
+                vitoria += 1
                 var removed = underline.splice(cont1, 1, id)
                 cont1 += 1
                 var virgula = underline.join(' ')
@@ -61,6 +63,7 @@ function verifica (id){
                 cont1 += 1
             }
         }
+        vitoria1()
 
     }else{
         if(termina == false){
@@ -107,7 +110,19 @@ function jogarNovamente(){
     tamanho()
 }
 
+function vitoria1(){
+    var teste = palavra.length
+    console.log(teste)
+    console.log(vitoria)
+    if(vitoria == teste){
+        console.log("Ganhou")
+        inicialModal('ganhador')
+    }
+}
 
-
+function fechar1(){
+    const modal = document.getElementById('ganhador')
+    modal.classList.remove('mostrar')
+}
 
 
