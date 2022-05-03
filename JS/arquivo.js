@@ -1,6 +1,6 @@
 
 var cont = 0
-var palavra = 'jaboticaba'
+var palavra = 'caminhoneiro'
 
 var usadas = '' 
 var letras = [] 
@@ -92,31 +92,13 @@ function fechar(){
     modal.classList.remove('mostrar')
 }
 
-function jogarNovamente(){
-    const modal = document.getElementById('alo')
-    modal.classList.remove('mostrar')
-    console.log(usadas)
-    document.getElementById('imagem').src= "../Image/forca0.jpg"
-    for(x of usadas){
-        var container = document.getElementById(x)
-        container.style.backgroundColor = 'white'
-    }
-    cont = 0
-    usadas = '' 
-    letras = [] 
-    underline = []
-    termina = false 
-    document.getElementById('letra').innerHTML = ''
-    tamanho()
-}
+
 
 function vitoria1(){
     var teste = palavra.length
-    console.log(teste)
-    console.log(vitoria)
     if(vitoria == teste){
-        console.log("Ganhou")
         inicialModal('ganhador')
+        clearInterval(interval)
     }
 }
 
@@ -124,5 +106,28 @@ function fechar1(){
     const modal = document.getElementById('ganhador')
     modal.classList.remove('mostrar')
 }
+
+let segundos = 60
+let minutos = 0
+
+function segundo(){
+    segundos --
+    if(minutos == 0 && segundos == 0){
+        clearInterval(interval)
+        termina = true
+        inicialModal('alo')
+        document.getElementById('muda').innerHTML = "Oh não, o tempo acabaou :("
+        
+    }else if(segundos == 0){
+        minutos --
+        document.getElementById('minuto').innerHTML = minutos
+        segundos = 59
+    }
+    document.getElementById('segundo').innerHTML = segundos
+    
+}
+
+interval = setInterval(function(){ segundo() },1000)
+
 
 

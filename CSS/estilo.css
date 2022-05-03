@@ -1,5 +1,6 @@
 body{
     background-color: #00546F;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #container {
@@ -52,7 +53,7 @@ body{
     padding: 30px;
     height: 150px;
     width: 545px;
-    margin: 10px auto;
+    margin: 10px auto 0px auto;
     background-color: #008BB8;
     border-radius: 10px 10px;
 }
@@ -90,7 +91,7 @@ body{
 
 .modal{
     background: white;
-    width: 60%;
+    width: 30%;
     text-align: center;
     position: relative;
 
@@ -150,4 +151,15 @@ body{
     text-align: center;
     position: relative;
 
+}
+
+#cronometro{
+    width: 100px;
+    height: 30px;
+    font-family: 'Courier New';
+    text-align: center;
+    margin: 0px auto;
+    font-size: 1.8em;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
 }
